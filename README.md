@@ -10,3 +10,4 @@
 * [markdown](markdown.md)
 * [ssh](ssh.md)
 * [Tale](Tale.md)
+* [防火墙设置](firewalld)
