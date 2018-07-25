@@ -2,12 +2,11 @@
 
 * 必须环境
   JDK8
-在命令行下输入：java -version进行查看，如果你还没有JDK8环境，请复制以下网址下载安装
-```
-https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=%E5%AE%89%E8%A3%85jdk8&rsv_pq=e8c007db000fce85&rsv_t=5a722NwTBlSPtvRjGgFxMBa5TeujOyaXY60bDEfTBX0O38Sjkde8BY6%2BJ7o&rqlang=cn&rsv_enter=1&rsv_sug3=14&rsv_sug1=11&rsv_sug7=100&rsv_sug2=0&inputT=3400&rsv_sug4=3505
-```
+在命令行下输入：java -version进行查看，如果你还没有JDK8环境，可以在[官网](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)下载安装
+
 * 安装Tale
 复制以下网址下载最新版Tale,该程序是个zip包，解压后的目录结构如下：
+
 ```
 网址：http://static.biezhi.me/tale-least.zip?1231
 ```
@@ -48,3 +47,32 @@ https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=%E5%AE%89%E8
 ./tale-cli upgrade
 ```
 
+
+## 防火墙设置
+
+* 检查网络的工具没有安装
+```
+yum install net-tools
+```
+
+* 检查端口是否被打开
+```
+netstat -ano | grep 9000
+```
+
+* 检查防火墙
+
+```
+[root@bogon tale]# firewall-cmd --state
+running
+[root@bogon tale]# firewall-cmd --zone=public --query-port=9000/tcp
+no
+[root@bogon tale]# firewall-cmd --zone=public --add-port=9000/tcp --permanent 
+success
+[root@bogon tale]# firewall-cmd --reload 
+success
+```
+
+## 使用浏览器检查
+
+http://192.168.1.243:9000
