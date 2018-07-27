@@ -12,3 +12,4 @@
 * [Tale](Tale.md)
 * [防火墙设置](firewalld.md)
 * [tar解压压缩](tar.md)
+* [系统时间设置](time.md)
