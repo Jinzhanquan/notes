@@ -6,6 +6,7 @@
 * [安装centos](install_centos.md)
 * [部署tomcat](tomcat_install.md)
 * [markdown](markdown.md)
+* [git github](github.md)
 * [linux](linux.md)
    * [ssh](ssh.md)
    * [Tale](Tale.md)
