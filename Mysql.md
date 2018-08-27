@@ -37,7 +37,18 @@ Replaced:
    ```
    [root@localhost ~]# systemctl status mysqld.service
    ```
-   运行状态如图：
-   ```
-    [图片.png]()
-    
+   
+   *  此时MySQL已经开始正常运行，不过要想进入MySQL还得先找出此时root用户的密码，通过如下命令可以在日志文件中找出密码：
+```
+
+[root@localhost ~]# grep "password" /var/log/mysqld.log
+ ```
+     
+   * 如下命令进入数据库：
+```
+[root@localhost ~]# mysql -uroot -p
+```
+* 安装了Yum Repository，以后每次yum操作都会自动更新，需要把这个卸载掉：
+```
+[root@localhost ~]# yum -y remove mysql57-community-release-el7-10.noarch
+```

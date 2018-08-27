@@ -14,6 +14,7 @@
    * [tar解压压缩](tar.md)
    * [系统时间设置](time.md)
    * [shell入门](hello_shell.md)
+   * [mv 命令](mv.md)
 * [mysql](2.md)
    * [mysql安装](Mysql.md)
    * [使用Mysql](1.md)
